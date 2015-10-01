@@ -35,7 +35,7 @@ class VerifyUserProvider extends EloquentUserProvider implements UserProvider
 		return $query->first();
 	}
 
-	protected function appendQueryConditions($query, $conditions, $exclude = ['password'])
+	protected function appendQueryConditions($query, $conditions, $exclude = ['password', 'password_confirmation'])
 	{
 		foreach ($conditions as $key => $value)
 		{
